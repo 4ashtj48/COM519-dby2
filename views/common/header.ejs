@@ -1,0 +1,25 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/"> SGC Purchasing</a>
+    <div class="navbar">
+      <div class="navbar-nav">
+        <a class="nav-link active" href="/">
+          Home <span class="sr-only">(current)</span>
+        </a>
+        <a class="nav-link" href="#"> Search PO's </a>
+
+        <a class="nav-link" href="PO#"> Purchase order</a>
+        <a class="nav-link" href="jobrefs"> Job ref</a>
+        <a class="nav-link" href="suppliers"> Suppliers</a>
+        <% if(user) { %>
+        <a class="nav-link" href="create-PO"> Create a P/O </a>
+        <a class="nav-link" href="logout"> <%= user.email %> (Logout) </a> <%
+        }%> <% if(!user) { %>
+        <a class="nav-link" href="login"> Login </a>
+        <a class="nav-link" href="join"> Register </a>
+        <% } %>
+      </div>
+    </div>
+  </nav>
+</header>
+
